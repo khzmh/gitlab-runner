@@ -12,6 +12,8 @@ RUN apt-get update && \
         kubectl \
         && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update && apt-get install -y bash
+
 # Tambah Helm (opsional)
 RUN curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
